@@ -1,0 +1,59 @@
+# Local workspace bookkeeping
+.DS_Store
+__pycache__/
+*.py[cod]
+.private/
+private/
+backups/
+working-copies/
+extracted/
+builds/
+diagnostics/
+
+# Proprietary applications and recovered game data
+*.[iI][pP][aA]
+*.[aA][pP][pP]/
+*.framework/
+*.dylib
+Payload/
+Caches/
+vehicles/
+Tracks/
+gui_assets/
+saves/
+*.dat
+*.dat.bak
+*.bak
+
+# Signing material, credentials, sensitive diagnostics
+*.p12
+*.pfx
+*.pem
+*.key
+*.cer
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+.env
+.env.*
+!.env.example
+.aws/
+.ssh/
+credentials.json
+secrets.json
+*.log
+*.ips
+*.crash
+
+# Private operational history; retained locally, excluded from portfolio
+/docs/SESSION_STATE.md
+/docs/PHASE1_BASELINE.md
+/docs/PHASE2_TEST01.md
+/docs/STANDALONE_ASSESSMENT.md
+/docs/RESOURCE_INITIALIZATION.md
+/docs/OFFLINE_PACKAGING_PLAN.md
+
+# Exploratory graphics analysis is outside this portfolio milestone
+/scripts/research_compatibility.py
+/tests/check_graphics_metadata.py
