@@ -1,4 +1,4 @@
-# Real Racing 3 — Offline Restoration
+# Real Racing 3 Offline Restoration
 
 Restoring a mobile racing game as a standalone, self-contained offline experience on iPad.
 
@@ -6,7 +6,7 @@ Restoring a mobile racing game as a standalone, self-contained offline experienc
 
 ## About the project
 
-Real Racing 3 is a mobile racing game developed by Firemonkeys and published by EA. This independent preservation project brings a personally preserved copy and its game resources together so gameplay can continue without relying on EA's asset-download servers.
+Real Racing 3 is a mobile racing game developed by Firemonkeys and published by EA. This independent preservation project brings a personally preserved copy and its game resources together so gameplay can continue without relying on EA's asset download servers.
 
 The application alone was not enough: it expected additional resources in specific locations before gameplay could begin. The challenge was to make those resources available locally while preserving the game's startup behaviour and keeping existing player data safe.
 
