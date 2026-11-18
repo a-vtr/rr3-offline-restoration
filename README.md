@@ -18,6 +18,7 @@ The application alone was not enough: it expected additional resources in specif
 - A separate “RR3 Restored” installation that coexists with the original App Store application without changing its progress.
 - Integrity verification covering all **26,043 preserved files** in the package.
 - **120 FPS observed during offline racing**, independently checked using Apple’s Metal Performance HUD.
+- Local save import and **WASD keyboard driving**, tested with a Logitech Combo Touch.
 
 Gameplay and save persistence were confirmed through hands-on testing on an **11-inch iPad Pro M5 running iPadOS 27.2.1**. Device traces also confirm resource readiness before the original startup sequence.
 
@@ -29,7 +30,7 @@ The application carries an immutable copy of the preserved resources. A native i
 
 The most significant engineering work involved coordinating startup without skipping original application setup, separating application and signing identities, and resolving a configuration failure caused by the renamed app. Integration changes are isolated and reversible; original backups and game instruction bodies were preserved.
 
-**Built with:** Objective-C++, UIKit, Foundation, Python, Xcode and ARM64 Mach-O analysis. The [native implementation](native/), [diagnostic scripts](scripts/) and [tests](tests/) are available for inspection.
+**Built with:** Objective-C++, UIKit, Foundation, Game Controller, Python, Xcode and ARM64 Mach-O analysis. The [native implementation](native/), [diagnostic scripts](scripts/) and [tests](tests/) are available for inspection.
 
 ## Gameplay demonstration
 
@@ -39,6 +40,7 @@ Screenshots and a short video showing offline racing and saved progress after re
 
 - Explore enhanced graphics and validate sustained **120 FPS**, frame pacing and thermal performance across more races.
 - Verify more cars, tracks and events, plus resource recovery after system cache removal.
+- Finish independent Home Screen activation of the optional Apple Metal HUD; its in-app Show/Hide control works during diagnostic launches.
 - Retest compatibility after significant iPadOS updates.
 
 The tested gameplay works; exhaustive content coverage and future OS compatibility are not yet established. Some additional manifest references remain unresolved. Enhanced graphics and sustained performance across all content remain future work. See the [compatibility matrix](docs/COMPATIBILITY_MATRIX.md) for details.
