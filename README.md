@@ -17,8 +17,11 @@ The application alone was not enough: it expected additional resources in specif
 - Working offline menus, tutorial and races, with **saved progress retained after a full quit and relaunch**.
 - A separate “RR3 Restored” installation that coexists with the original App Store application without changing its progress.
 - Integrity verification covering all **26,043 preserved files** in the package.
+- **120 FPS observed during offline racing**, independently checked using Apple’s Metal Performance HUD.
 
 Gameplay and save persistence were confirmed through hands-on testing on an **11-inch iPad Pro M5 running iPadOS 27.2.1**. Device traces also confirm resource readiness before the original startup sequence.
+
+During the latest race check, Apple’s HUD showed **120 FPS** and **3.18 ms GPU time**. Captured Apple HUD records independently counted **2,058 drawable presentations over 17.15 seconds**, approximately 120 per second. This is a measured gameplay milestone, not a guarantee of sustained performance across every track or a long session; later capture rates fell with activity context unconfirmed. See the [test results](docs/COMPATIBILITY_MATRIX.md#performance-observation--2026-11-18) for measurement limits.
 
 ## How offline restoration works
 
@@ -34,11 +37,11 @@ Screenshots and a short video showing offline racing and saved progress after re
 
 ## Future improvements
 
-- Explore enhanced graphics and stable **120 FPS**, with measured performance and frame pacing.
+- Explore enhanced graphics and validate sustained **120 FPS**, frame pacing and thermal performance across more races.
 - Verify more cars, tracks and events, plus resource recovery after system cache removal.
 - Retest compatibility after significant iPadOS updates.
 
-The tested gameplay works; exhaustive content coverage and future OS compatibility are not yet established. Some additional manifest references remain unresolved. Graphics enhancements and 120 FPS are goals, not current results. See the [compatibility matrix](docs/COMPATIBILITY_MATRIX.md) for details.
+The tested gameplay works; exhaustive content coverage and future OS compatibility are not yet established. Some additional manifest references remain unresolved. Enhanced graphics and sustained performance across all content remain future work. See the [compatibility matrix](docs/COMPATIBILITY_MATRIX.md) for details.
 
 ## Attribution and availability
 

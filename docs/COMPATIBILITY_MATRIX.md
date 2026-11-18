@@ -17,6 +17,20 @@ Untested future iPadOS versions have no compatibility claim. Do not infer a rang
 of support from the original minimum deployment target, CPU architecture, one OS
 pass, host tests or successful signing alone.
 
+## Performance observation — 2026-11-18
+
+Tested build: `fe7e6e1ab31595a0`, on the same 11-inch iPad Pro M5 / iPadOS 27.2.1 environment. The owner confirms racing with the updated app. Signing/profile and separated identity checks passed before its same-identity update; these are distinct from the performance observations below.
+
+| Evidence | Result | Limit |
+| --- | --- | --- |
+| Custom game presentation counter | Owner observed 120 successful submissions/s during racing | Submission success alone does not prove displayed FPS. |
+| Apple Metal Performance HUD | Owner read **120 FPS** and **3.18 ms GPU time** while actively driving | Independent of the custom counter; values were read from the device overlay, not captured in a screenshot. Visible frame interval was not supplied. |
+| Captured Apple HUD frame-number records | Initial **2,058 drawable presentations / 17.15 seconds ≈ 120/s** | Not a complete frame-pacing or unique-frame analysis. Later capture rates dropped sharply; activity context was not established, so the entire capture is not a sustained 120 FPS pass. |
+
+The HUD became active after an approved launch with Apple's documented `MTL_HUD_ENABLED` and `MTL_HUD_LOG_ENABLED` options. USB timing fields were privacy-redacted; the screenshot service was unavailable. An Instruments trace failed before recording because its device service listed the connected iPad offline. No GPU trace or long-session thermal result is claimed.
+
+These results support 120 FPS during observed racing, rather than relying on a requested refresh rate or the custom counter alone. Exhaustive track coverage, sustained performance and frame-pacing distributions remain untested. Apple defines the HUD's FPS from its on-glass frame interval and GPU time from command-buffer timings: [metric definitions](https://developer.apple.com/documentation/xcode/understanding-metal-performance-hud-metrics).
+
 ## Host harness evidence — separate from iPadOS compatibility
 
 | Test ID / date | Environment | Artifact identity / evidence | Result | Scope limit |
