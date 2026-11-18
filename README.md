@@ -40,7 +40,7 @@ Screenshots and a short video showing offline racing and saved progress after re
 
 - Explore enhanced graphics and validate sustained **120 FPS**, frame pacing and thermal performance across more races.
 - Verify more cars, tracks and events, plus resource recovery after system cache removal.
-- Finish independent Home Screen activation of the optional Apple Metal HUD; its in-app Show/Hide control works during diagnostic launches.
+- Resolve optional Apple Metal HUD activation after normal Home Screen launches; its in-app Show/Hide control works during diagnostic launches.
 - Retest compatibility after significant iPadOS updates.
 
 The tested gameplay works; exhaustive content coverage and future OS compatibility are not yet established. Some additional manifest references remain unresolved. Enhanced graphics and sustained performance across all content remain future work. See the [compatibility matrix](docs/COMPATIBILITY_MATRIX.md) for details.
